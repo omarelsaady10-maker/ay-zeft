@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <style>
         * {
             box-sizing: border-box;
-            /* لمنع ظهور المربع الأزرق الشفاف عند الضغط على العناصر في متصفحات الموبايل */
+            /* لمنع ظهور المربع الأزرق عند الضغط على العناصر في الموبايل */
             -webkit-tap-highlight-color: transparent;
         }
 
@@ -59,9 +59,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            /* مسافة بين الأيقونة والنص */
             outline: none;
-            /* إزالة الإطار عند التحديد */
         }
 
         .header-link a:hover,
@@ -227,37 +225,75 @@
             width: 35px;
         }
 
-        /* Responsive Design for Mobile & Tablets */
+        /* Responsive Design / ضبط المساحات للموبايل */
         @media (max-width: 768px) {
             .header {
-                padding: 15px 4%;
+                padding: 12px 4%;
+            }
+
+            .logo {
+                width: 75px;
+            }
+
+            .header-link {
+                gap: 4px;
             }
 
             .header-link a {
                 padding: 6px 10px;
                 font-size: 13px;
+                gap: 5px;
             }
 
             .main-body {
                 flex-direction: column-reverse;
                 text-align: center;
-                padding: 30px 5% 50px 5%;
+                padding: 30px 6% 40px 6%;
+                border-radius: 0 0 30px 30px;
+                gap: 20px;
+            }
+
+            .main-body h1 {
+                font-size: 28px;
+            }
+
+            .main-body h2 {
+                font-size: 20px;
             }
 
             .main-body img {
-                max-width: 250px;
+                max-width: 220px;
             }
 
             .search-wrapper {
                 margin: 20px auto 0 auto;
+                max-width: 100%;
+            }
+
+            .search-wrapper input {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+
+            .search-wrapper .btn-search {
+                padding: 10px 16px;
+                font-size: 13px;
             }
 
             .trending-container {
-                padding: 40px 5%;
+                padding: 30px 5%;
             }
 
             .trending-header h1 {
                 font-size: 22px;
+            }
+
+            .trending-cards {
+                gap: 15px;
+            }
+
+            .card {
+                max-width: 100%;
             }
         }
     </style>
